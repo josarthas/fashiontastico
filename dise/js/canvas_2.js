@@ -9,3 +9,4 @@ function background(){
         ctx.drawImage(background,0,0);   
     }
 }
+
