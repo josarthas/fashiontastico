@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css"/>
 	<link rel="stylesheet" type="text/css" href="css/ui-darkness/jquery-ui-1.8.10.custom.css"/>
     <link rel="stylesheet" type="text/css" href="css/colorpicker.css"/>
+    <link rel="stylesheet" type="text/css" href="css/canvas.css">
 	
 	<script type="text/javascript" src="js/jquery/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.10.custom.min.js"></script>
@@ -24,6 +24,7 @@
     <script type="text/javascript" src="js/layout.js"></script>
     <script type="text/javascript" src="js/brushes.js"></script>
     <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/canvas_2.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -49,6 +50,7 @@
 
                 // initialize the canvas
                 initializeCanvas();
+                background();
 
                 // load the images
                 loadImages();                
@@ -103,7 +105,7 @@
             <h2 id="step-1"><a href="#">Paso 1 - Crear</a></h2>
             <div>
                 <div id="canvas-panel" class="block">
-                    <canvas id="drawingCanvas" width="700" height="450"></canvas>
+                    <canvas id="drawingCanvas" width="500" height="450"></canvas>
 			        <canvas id="overlay" width="700" height="450"
                             onSelectStart="setCursor(this); return false;"></canvas>
                 </div>
@@ -127,13 +129,13 @@
                             <img id="paint-tool" src="images/tools_panel_paint_button.png" class="block, fill" />
                         </li>
                         <li class="tool-panel-button tool-button">
-                            <img id="colour-picker-tool" src="images/tools_panel_colour_picker_button.png" class="block, fill" />
-                        </li>
-                        <li class="tool-panel-button tool-button">
                             <img id="eraser-tool" src="images/tools_panel_eraser_button.png" class="block, fill" />
                         </li>
                         <li class="tool-panel-button tool-button">
                             <img id="delete-tool" src="images/tools_panel_delete_button.png" class="block, fill" />
+                        </li>
+                        <li class="tool-panel-button tool-button">
+                            <img id="upload-tool" src="images/upload_tool_button.png" class="block, fill" />
                         </li>
                     </ul>
                 </div>
