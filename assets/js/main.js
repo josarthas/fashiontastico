@@ -28,9 +28,21 @@
 
 			$window.on('load', function() {
 				window.setTimeout(function() {
-					$body.removeClass('is-loading');
+					$body.removeClass('is-loading');										
+
+					////var firstNav = $("div.navigation_content");
+
+					// Aquí es dónde se deberpia ocultar a barra lateral.
+					if ( $("div.navigation_content").length ) {
+						console.log("Tiene elementos");
+					}
+					console.log("Vacio");					
+
+					//$("div.navigation_content").hide();
 				}, 100);
 			});
+
+			
 
 		// Mobile?
 			if (skel.vars.mobile)

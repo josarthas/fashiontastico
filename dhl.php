@@ -1,12 +1,23 @@
 <!DOCTYPE HTML>
 <!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Stellar by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 
 <head>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+
+
     <title>fASHIONTASTICO - CARRITO DE COMPRAS</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -50,12 +61,21 @@
         </header>
         <!-- Content -->
         <div>
+            <!--
+            Este selector trae resultados pero sólo cuando se ha interactuado con el iframe a traves de elements de las opciones de desarrollo de Chrome
+            $("div.navigation_content")
+
+            Una ves que se puede seleccionar la barra, se puede incluso ocultar
+            $("div.navigation_content").hide();
+            -->
             <!-- Content -->
-            <div style="width:700px;height:700px; position:relative; overflow:hidden">
-                <iframe src="http://www.dhl.com.mx/es/express/rastreo.htm" style="top:-100px; position:absolute" width="800" height="600" scrolling="no" frameborder="1" #trackingIndex>
+            <div style="width:700px;height:300px; position:relative; overflow:hidden">
+            
+                <iframe id="dhlPage" src="http://www.dhl.com.mx/es/express/rastreo.htm" style="top:-125px; position: absolute;" width="800" height="600" scrolling="yes" frameborder="1" #trackingIndex>
                     <p>Tu navegador no soporta este tipo de vista, </p>
                 </iframe>
             </div>
+            
         </div>
 
         <!-- Footer -->
@@ -84,14 +104,7 @@
 
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="assets/js/main.js"></script>
+
 
 </body>
 
