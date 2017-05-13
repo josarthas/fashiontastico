@@ -1,0 +1,29 @@
+
+#drawingCanvas, #overlay 
+{
+	position: absolute;
+	left: 15%;
+	border-radius: 42px 42px 42px 42px;
+
+}
+
+#drawingCanvas
+{
+	background: white;
+	z-index: 1;
+}
+
+#overlay {
+	background: rgba(0, 0, 0, 0);
+	z-index: 2;
+}
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    cursor: pointer;
+}

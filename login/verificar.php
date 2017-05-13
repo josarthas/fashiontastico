@@ -1,16 +1,36 @@
 <?php
 session_start();
-include "../conexion.php";
-$re=mysqli_query($con,"select * from usuarios where Usuario='".$_POST['Usuario']."' AND 
- 					Password='".$_POST['Password']."'")	or die(mysql_error());
-	while ($f=mysqli_fetch_array($re)) {
-		$arreglo[]=array('Nombre'=>$f['Nombre'],
-			'Apellido'=>$f['Apellido'],'Imagen'=>$f['Imagen']);
-	}
-	if(isset($arreglo)){
-		$_SESSION['Usuario']=$arreglo;
-		header("Location: ../admin.php");
+include "../php/conexion.php";
+$email = $_POST["email"];
+$password = $_POST["password"];
+
+
+	//Coneccion y consulta a la BD
+$link = Conectarse();
+$email = mysqli_real_escape_string($link,$email);
+$pass = mysqli_real_escape_string($link,$password);
+$query = "SELECT * FROM usuarios WHERE email= '$email' AND contrasena= '$password'";
+$run_user = mysqli_query($link, $query);
+$check_user = mysqli_num_rows($run_user);
+
+
+	if($check_user>0){
+		while ($row=mysqli_fetch_row($run_user)) {
+			$tipo = $row[4];
+		}	
+		// Tipo 0 son Administradores
+		//Tipo 1 son Usuarios
+		if ($tipo == 0) {
+			$_SESSION[‘email’]=$email;
+			echo header("Location:../Principal_Administrador.html");
+		}else{
+			$_SESSION[‘email’]=$email;
+			echo header("Location:../Principal_Usuarios.html");
+		}
 	}else{
-		header("Location: ../login.php?error=datos no validos");
+			echo '<script type="text/javascript">
+			alert("Contraseña o correo incorrecto");
+			window.location.assign("../index.html");
+			</script>';
 	}
 ?>

@@ -7,13 +7,10 @@
 <html>
 
 <head>
-    <title>fASHIONTASTICO - CARRITO DE COMPRAS</title>
+    <title>Inicio de Sesión</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
 </head>
 
@@ -46,64 +43,51 @@
 
 
         <header>
-            <img src="images/fashiontastico.png" width="400px">
+            <img src="images/fashiontastico.png" width="200px" style="margin-left: 2%">
         </header>
         <!-- Content -->
         <!-- Main -->
         <div id="main">
 
             <!-- Content -->
-            <section id="content" class="main">
-                <form id="formulario" method="post" action="./login/verificar.php">
+            <section  class="main">
+                <form id="formulario" method="post" action="./php/verificar.php">
                     <?php if(isset($_GET[ 'error'])){ echo '<center>Datos No Validos</center>'; } ?>
-                    <label for="usuario">Usuario</label>
+                    Correo
                     <br>
-                    <input type="text" id="usuario" name="Usuario" placeholder="usuario">
                     <br>
-                    <label for="password">Contraseña</label>
+                    <input type="email" id="email" name="email" placeholder="Usuario" required>
                     <br>
-                    <input type="password" id="password" name="Password" placeholder="password">
+                    Contraseña
                     <br>
-                    <input type="submit" name="aceptar" value="Aceptar" class="aceptar">
+                    <br>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <br>
+                    <input type="submit" name="aceptar" value="Iniciar Sesión" class="aceptar">
                     <br>
                 </form>
-                <section>
-                    ¿Aun no formas parte de nosotros?
-                    <div class="inner">
-                        <ul class="actions">
-                            <li><a href="./registro.php" class="button special">registrate ya!</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
             </section>
         </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <section>
-                <h2>CONTACTO</h2>
-                <dl class="alt">
+        <br>
+        <br>
+        <div style="text-align: center;">
+                <h2>Contacto</h2>
                     <dt>Telefono</dt>
                     <dd>(+52) 1 222 564 5392</dd>
                     <dd>(+52) 1 222 563 5687</dd>
                     <dt>Correo</dt>
                     <dd><a href="#">contacto@fashiontastico.com.mx</a>
                     </dd>
-                </dl>
                 <ul class="icons">
                     <li><a href="www.facebook.com/fashiontastico" class="icon fa-facebook"><span class="label">Facebook</span></a>
                     </li>
                     <li><a href="www.instagram.com/fashiontasticooficial/" class="icon fa-instagram"><span class="label">Instagram</span></a>
                     </li>
-
                 </ul>
-
-            </section>
             <p class="copyright">&copy;Diseñado: <a href="">Skytec Enterprises</a>.</p>
-        </footer>
-
-
+            <br>
+            <br>
+            </div>
     </div>
 
     <!-- Scripts -->
@@ -112,7 +96,6 @@
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
 
 </body>

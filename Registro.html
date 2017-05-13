@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Registro</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="landing">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">FASHIONTASTICO</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="./index.php">Pagina principal</a>
+                                </li>
+                                <li><a href="./dhl.php">Revisa donde esta tu pedido con DHL</a>
+                                </li>
+                                <li><a href="./compras.php">Compra alguno de nuestros diseños</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <header>
+            <img src="images/fashiontastico.png" width="200px" style="margin-left: 2%">
+        </header>
+        <!-- Content -->
+        <!-- Main -->
+        <div id="main">
+            <!-- Content -->
+            <section id="content" class="main">
+                <form method="POST" action="./php/registro.php" class="form">
+                    <br>
+                    <input type="Text" name="nombre" id="nombre" placeholder="Nombre" required>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    <br>
+                    <input type="Text" placeholder="Usuario" name="usuario" id="usuario" required><b></b>
+                    <br>
+                    <input type="password" placeholder="Contraseña" name="password" id="password" required>
+                    <br>
+                    <br>
+                    <input type="Submit" name="submit" value="Registro">
+                </form>
+            </section>
+        </div>
+        <!-- Footer -->
+        <div style="text-align: center;">
+                <h2>Contacto</h2>
+                    <dt>Telefono</dt>
+                    <dd>(+52) 1 222 564 5392</dd>
+                    <dd>(+52) 1 222 563 5687</dd>
+                    <dt>Correo</dt>
+                    <dd><a href="#">contacto@fashiontastico.com.mx</a>
+                    </dd>
+                <ul class="icons">
+                    <li><a href="www.facebook.com/fashiontastico" class="icon fa-facebook"><span class="label">Facebook</span></a>
+                    </li>
+                    <li><a href="www.instagram.com/fashiontasticooficial/" class="icon fa-instagram"><span class="label">Instagram</span></a>
+                    </li>
+                </ul>
+            <p class="copyright">&copy;Diseñado: <a href="">Skytec Enterprises</a>.</p>
+            </div>
+            <br>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1656,7 +1656,9 @@
 /* Form */
 
 	form {
-		margin: 0 0 2em 0;
+		text-align: center;
+		margin-bottom: 2cm;
+		
 	}
 
 	label {
@@ -1684,7 +1686,9 @@
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 50%;
+		width: 30%;
+		margin-left: 35%;
+		margin-right: 15%;
 	}
 
 		input[type="text"]:invalid,
@@ -3701,8 +3705,8 @@
 
 	#footer {
 		padding: 6em 0 4em 0 ;
-		background-color: #1d242a;
 		text-align: center;
+		
 	}
 
 		#footer .icons {
@@ -3812,3 +3816,10 @@
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
