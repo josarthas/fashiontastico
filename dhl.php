@@ -1,31 +1,18 @@
 <!DOCTYPE HTML>
-<!--
-    Stellar by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 
-<head>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
-
-
-    <title>fASHIONTASTICO - CARRITO DE COMPRAS</title>
+    <title>RASTREA TU PEDIDO</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-
+    <link rel="stylesheet" href="assets/css/user.css" />
 </head>
 
 <body class="landing">
@@ -57,26 +44,20 @@
 
 
         <header>
-            <img src="images/fashiontastico.png" width="400px">
+            <img src="images/Logotio_web2.png" width="400px">
         </header>
         <!-- Content -->
-        <div>
-            <!--
-            Este selector trae resultados pero sólo cuando se ha interactuado con el iframe a traves de elements de las opciones de desarrollo de Chrome
-            $("div.navigation_content")
+        <section id="banner" class="inner center-block">
 
-            Una ves que se puede seleccionar la barra, se puede incluso ocultar
-            $("div.navigation_content").hide();
-            -->
             <!-- Content -->
-            <div style="width:700px;height:300px; position:relative; overflow:hidden">
+            <div style="width:500px;height:700px; position:absolute; left: 25% ; overflow:hidden" class="center-block inline-block">
             
-                <iframe id="dhlPage" src="http://www.dhl.com.mx/es/express/rastreo.htm" style="top:-125px; position: absolute;" width="800" height="600" scrolling="yes" frameborder="1" #trackingIndex>
+                <iframe id="dhlPage" src="http://www.dhl.com.mx/es/express/rastreo.htm" style="top:-120px; left:-208px; position: absolute;" width="1000" height="800" scrolling="no" frameborder="1" class="center-block inline-block" #trackingIndex>
                     <p>Tu navegador no soporta este tipo de vista, </p>
                 </iframe>
             </div>
             
-        </div>
+        </section>
 
         <!-- Footer -->
         <footer id="footer">
